@@ -1,4 +1,4 @@
-# app_dev
+# **app_dev**
 This repo is all about what i explored in app development
 
 # Kotlin and Jetpack Compose Overview
