@@ -62,4 +62,6 @@ fun EncoderDecoder() {
         )
     }
 }
+
+
 This ensures that the image fills the entire screen properly.
