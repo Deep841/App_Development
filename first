@@ -1,40 +1,29 @@
-Humble Coder's Workshop - Kotlin & Jetpack Compose Notes
+# Humble Coder's Workshop - Kotlin & Jetpack Compose Notes
 
-Basics of Kotlin
+## Basics of Kotlin
 
-val: Immutable (fixed) variable.
+- **`val:`** Immutable (fixed) variable.
+- **`var:`** Mutable variable (can be changed).
+- **No need to specify the data type explicitly.**
+- **No use of semicolons (`;`).**
 
-var: Mutable variable (can be changed).
-
-No need to specify the data type explicitly.
-
-No use of semicolons (;).
-
-Jetpack Compose - UI Toolkit
+## Jetpack Compose - UI Toolkit
 
 Jetpack Compose is used for UI development.
 
-The main screen in an app is usually a Composable Activity.
+- **The main screen in an app is usually a Composable Activity.**
+- **`setContent`** defines what appears on the main screen.
+- **`enableEdgeToEdge`** allows the app to extend to the notch area.
 
-setContent defines what appears on the main screen.
+## Composables in Jetpack Compose
 
-enableEdgeToEdge allows the app to extend to the notch area.
+- Use **`@Composable`** annotation to define UI components.
+- **`Box`** is used to stack elements (e.g., text over a background).
+- **`painterResource`** is used for images, similar to strings using `""`.
 
-Composables in Jetpack Compose
+## Working with Images in Jetpack Compose
 
-Use @Composable annotation to define UI components.
-
-Box is used to stack elements (e.g., text over a background).
-
-painterResource is used for images, similar to strings using " ".
-
-Working with Images in Jetpack Compose
-
-Store images in res/drawable.
-
-Use painterResource(id = R.mipmap.image_name) to load an image.
-
-R refers to the res folder.
-
-contentDescription: Used for accessibility (helps visually impaired users).
-
+- Store images in **`res/drawable`**.
+- Use **`painterResource(id = R.mipmap.image_name)`** to load an image.
+- **`R`** refers to the `res` folder.
+- **`contentDescription`**: Used for accessibility (helps visually impaired users).
