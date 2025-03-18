@@ -62,6 +62,82 @@ fun EncoderDecoder() {
         )
     }
 }
-
-
 //This ensures that the image fills the entire screen properly.
+```
+
+---
+
+# Mutable and Immutable Variables
+
+- `var`: Changeable values used when UI elements update dynamically
+- `val`: Fixed values that do not change
+- Example:
+
+```kotlin
+var a = 9
+println(a)
+a = 10
+println(a) // Instead of printing twice, update the value before displaying
+```
+
+---
+
+# State Management in Jetpack Compose
+
+- `mutableStateOf("")`: Holds a mutable state for UI updates
+- Example:
+
+```kotlin
+var inputEncode by remember { mutableStateOf("") }
+TextField(
+    value = inputEncode,
+    onValueChange = { inputEncode = it },
+    label = { Text("Enter a string to encode") }
+)
+```
+
+---
+
+# Encoding & Decoding Strings
+
+- Convert string to ASCII, shift values by `+2`, then back to string
+- Example:
+
+```kotlin
+fun encodeString(input: String): String {
+    return input.map { char -> (char.code + 2).toChar() }.joinToString("")
+}
+```
+
+---
+
+# Layouts in Jetpack Compose
+
+- `Column`: Places elements one below another
+- `Row`: Places elements side by side
+- `Box`: Stacks elements on top of each other
+
+---
+
+# Intent in Android
+
+- **Intent**: Used for actions like sharing content
+- Example:
+
+```kotlin
+val intent = Intent(Intent.ACTION_SEND)
+intent.type = "text/plain"
+intent.putExtra(Intent.EXTRA_TEXT, "Hello from my app!")
+startActivity(Intent.createChooser(intent, "Share via"))
+```
+
+---
+
+# Context in Android
+
+- **Context** provides access to app resources and services
+
+---
+
+This document covers fundamental concepts in Jetpack Compose, state management, encoding techniques, layouts, and Android intents.
+
